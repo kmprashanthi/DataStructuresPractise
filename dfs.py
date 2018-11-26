@@ -10,7 +10,7 @@ def dfs (graph, start, visited = None):
         visited = set()
     visited.add(start)
     print(start)
-    for next in graph[start]-visited:
+    for next in graph[start]-visited: # to remove the set property used, you can have a if condition inside to check if the node was visited
         dfs(graph,next,visited)
     return visited
 
